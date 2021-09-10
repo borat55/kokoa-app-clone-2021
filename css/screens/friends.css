@@ -1,0 +1,60 @@
+#friends-display-link {
+  text-align: center;
+  display: block;
+  background-color: #fafafa;
+  padding: 15px 0px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  margin-top: -10px;
+}
+#friends-display-link {
+  color: rgba(0, 0, 0, 0.6);
+  font-weight: 600;
+}
+.friends-screen {
+  padding: 0px var(--horizontal-space);
+}
+.friends-screen__channel {
+  margin-top: 25px;
+  border-top: var(--main-border);
+  padding-top: 15px;
+}
+.friends-screen__channel-header {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+/* 애니메이션을 만들자 */
+@keyframes hideSplashScreen {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+#splash-screen {
+  /* splash-screen는 css에서 position을 absolute을 줄꺼야.
+    absolute : 자신이 정하고 싶은 기준점(부모)을 새로 정할 수 있음. 
+    하지만 we want this div align itself with the body*/
+  background-color: var(--yellow);
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 128px;
+  animation: hideSplashScreen 0.2s ease-in-out forwards;
+  /* The final property value as defined in the last keyframes at-rule,
+  which in this case would be "opacity: 0",
+  is maintained after the animation completes.
+  하지만 이런 상태에서 만약에 opacity 아래 visibility를 준다면? 그러면 
+  이 splash-screen의 visibility가 적용이 돼서 버튼들이 다시 눌리게 돼*/
+  animation-delay: 0.4s;
+}

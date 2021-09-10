@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+
+@import "reset.css";
+@import "variables.css";
+
+/* Components */
+@import "components/status-bar.css";
+@import "components/nav-bar.css";
+@import "components/screen-header.css";
+@import "components/alt-screen-header.css";
+@import "components/user-component.css";
+@import "components/badge.css";
+@import "components/icon-row.css";
+@import "components/no-mobile.css";
+
+/* Screens */
+@import "screens/login.css";
+@import "screens/friends.css";
+@import "screens/find.css";
+@import "screens/more.css";
+@import "screens/settings.css";
+@import "screens/chat.css";
+
+body {
+  color: #2f363e;
+  font-family: "Open Sans", sans-serif;
+}
+.main-screen {
+  padding: 0px var(--horizontal-space);
+}
+img {
+  width: 300px;
+  height: 150px;
+  object-fit: cover;
+}
+
+/*모든 셀렉터가 가지고있는 마진이나 패딩값을 0로 만들어줌*/
+
+/* 자 여기서 보여줄 것이 바로 CSS Hack 이라는 것인데. 지금 현재 Service 랑 Battery 부분은 자연스러운데 
+그 가운데 있는 시간이 좀 옆으로 치우쳐져있어. 이거는 사실 지금까지 배운 것들로는 해결이 안되고
+CSS Hack을 이용해서 (사람들이 찾아낸 방법) 해결을 할거야. 먼저 justify-content를 center로 바꾸고
+저 위에 부분이 속해있는 class에 width를 33% 주고
+*/

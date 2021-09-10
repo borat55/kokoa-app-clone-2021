@@ -1,0 +1,20 @@
+#no-mobile {
+  position: absolute;
+  /* goes on the top of everything */
+  z-index: 99;
+  /* so not even the splash or friends don't come above this */
+  height: 100vh;
+  background-color: var(--yellow);
+  width: 100vw;
+  display: flex;
+  top: 0;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+}
+
+@media screen and (max-width: 645px) {
+  #no-mobile {
+    display: none;
+  }
+}

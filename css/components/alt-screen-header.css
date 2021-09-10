@@ -1,0 +1,33 @@
+.alt-header {
+  padding: var(--horizontal-space);
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.alt-header__column {
+  /* 3. 여기에서 이제 맨 위에 settings align 하는 hack 방법 들어갑니다. */
+  width: 33%;
+}
+.alt-header-title {
+  font-size: 28px;
+  font-weight: 600;
+}
+.alt-header__column:first-child {
+  /* 1. 여기에서 이제 맨 위에 settings align 하는 hack 방법 들어갑니다. */
+  margin-right: auto;
+}
+.alt-header__column:nth-child(2) {
+  /* 5. 여기에서 이제 맨 위에 settings align 하는 hack 방법 들어갑니다. */
+  text-align: center;
+}
+.alt-header__column:last-child {
+  /* 2. 여기에서 이제 맨 위에 settings align 하는 hack 방법 들어갑니다. */
+  margin-left: auto;
+  /* 4. 여기에서 이제 맨 위에 settings align 하는 hack 방법 들어갑니다. */
+  display: flex;
+  justify-content: flex-end;
+}
+.alt-header__column span:last-child {
+  margin-left: 20px;
+}

@@ -26,7 +26,6 @@
   color: rgba(0, 0, 0, 0.5);
 }
 
-/* 애니메이션을 만들자 */
 @keyframes hideSplashScreen {
   from {
     opacity: 1;
@@ -38,9 +37,6 @@
 }
 
 #splash-screen {
-  /* splash-screen는 css에서 position을 absolute을 줄꺼야.
-    absolute : 자신이 정하고 싶은 기준점(부모)을 새로 정할 수 있음. 
-    하지만 we want this div align itself with the body*/
   background-color: var(--yellow);
   position: absolute;
   width: 100vw;
@@ -51,10 +47,5 @@
   align-items: center;
   font-size: 128px;
   animation: hideSplashScreen 0.2s ease-in-out forwards;
-  /* The final property value as defined in the last keyframes at-rule,
-  which in this case would be "opacity: 0",
-  is maintained after the animation completes.
-  하지만 이런 상태에서 만약에 opacity 아래 visibility를 준다면? 그러면 
-  이 splash-screen의 visibility가 적용이 돼서 버튼들이 다시 눌리게 돼*/
   animation-delay: 0.4s;
 }

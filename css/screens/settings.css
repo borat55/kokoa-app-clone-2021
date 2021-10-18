@@ -16,6 +16,10 @@
   margin-right: 20px;
   font-size: 25px;
 }
+.settings_setting-column {
+  display: flex;
+  align-items: center;
+}
 .settings_setting-column:last-child {
   opacity: 0.6;
 }
@@ -37,7 +41,10 @@
   border-radius: 50%;
   height: 10px;
   width: 10px;
-  padding: 2px 5px;
+  padding: 5px 5px;
   right: 5px;
   bottom: 10px;
+  margin-left: 5px;
+  display: flex;
+  align-items: center;
 }

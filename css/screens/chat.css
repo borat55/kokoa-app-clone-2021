@@ -2,9 +2,7 @@
   background-color: #abc1d1;
   height: 500vh;
 }
-/* #chat-screen .status-bar, */
 #chat-screen .alt-header {
-  /* 아래는 어떻게 하면 이름이 있는 bar를 고정시키는지 알려주는 코딩 */
   top: 0;
   position: fixed;
   width: 100%;
@@ -14,7 +12,6 @@
 #chat-screen .alt-header,
 #chat-screen .status-bar {
   background-color: #abc1d1;
-  /* status bar가 사라져서 이 background를 잠시 untag해봄 */
 }
 #chat-screen .alt-header {
   top: 10px;
@@ -51,11 +48,22 @@
   border-radius: 25px;
   margin-bottom: 25px;
 }
+@import slidein {
+  from {
+    transform: translateX(0px) rotate(0deg) translateY(5px);
+  }
+  to {
+    transform: translateX(10px) rotate(10deg) translateY(5px);
+  }
+}
 .message-row {
   width: 100%;
   display: flex;
   margin-bottom: 25px;
+  animation: slidein 0.5s ease-in;
+  animation-delay: 3s;
 }
+
 .message-row img {
   width: 50px;
   height: 50px;
